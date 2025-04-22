@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>scisor rock paper dom projects html</title>
+
+<link rel="stylesheet" href="style/10 dom scisor rock paper.css">
+
+
+</head>
+
+                    <body>
+                      <p class="title">Rock Paper Scissors</p>
+
+
+                      <button onclick=" PlayGame(`Rock`)"
+                      class="move-button"
+                      
+                      ><img src="image/rock.png" class="move-icon"></button>
+
+
+                      <button onclick=" PlayGame(`paper`) 
+                            
+                          " class="move-button"
+                          ><img src="image/paper.png" class="move-icon"> </button>
+
+                          <button onclick=" PlayGame(`Scissors`)
+
+                         "class="move-button"
+                          ><img src="image/Scissors.png" class="move-icon"> </button>
+
+         
+
+<p class="js-Score score"> </p>
+<p class="js-result result" > </p>
+<p class=" js-Move"></p>
+
+
+
+                      <button onclick="Score.win=0,  Score.lose=0,  Score.tie=0;
+                      localStorage.removeItem('score');
+                      UpdateScoreElement();
+                      "class=" rest-score-button">Rest store</button>
+
+
+<script src="script/10 dom scisor paper rock.js" >
+
+</script>
+
+
+
+  
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+
+
+
+
+</head>
+<body>
+  
+</body>
+</html>
+
+<style>
+  /* General Page Styling */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin: 20px;
+  }
+
+  /* Search Bar Styling */
+  .search-bar {
+    width: 50%;
+    max-width: 500px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    outline: none;
+  }
+
+  /* Container for Video Previews */
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: left;
+    max-width: 900px;
+  }
+
+  /* Individual Video Card */
+  .video-preview {
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+   
+  }
+
+  /* Thumbnail Styling */
+  .nice {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  /* Video Title */
+  .video-title {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 10px 0;
+  }
+
+  /* Author & Status Styling */
+  .video-author {
+    color: #555; ;
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  .video-status {
+    color: #777;
+    font-size: 12px;
+  }
+</style>
+
+
+</head>
+<body>
+
+  <!-- Search Bar -->
+  <input type="text" placeholder="Search" class="search-bar">
+
+  <!-- Video Container -->
+  <div class="container">
+    <div class="video-preview"> 
+      <img src="image/thumbnail-1.webp" class="nice">
+      <p class="video-title">Talking Tech and AI Google CEO Sundar Pichai!</p>
+      <p class="video-author">Marques Brownlee</p>
+      <p class="video-status">3.4M views &#183; 6 months ago</p>
+    </div>
+
+    <div class="video-preview"> 
+      <img src="image/thumbnail-2.webp" class="nice">
+      <p class="video-title">Try Not To Laugh Challenge #9</p>
+      <p class="video-author">Markiplier</p>
+      <p class="video-status">19M views &#183; 6 years ago</p>
+    </div>
+  </div>
+
+</body>

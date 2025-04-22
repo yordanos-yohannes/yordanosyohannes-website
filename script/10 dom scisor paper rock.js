@@ -1,0 +1,128 @@
+
+let Score=JSON.parse(localStorage.getItem( 'score'))|| {
+  win  :0,
+  
+  lose :0,tie :0}
+  
+
+  UpdateScoreElement();
+
+  
+
+
+/*if(Score===null){
+  Score ={
+  win  :0,
+  
+  lose :0,tie :0}
+}; (score===null)=(!score)
+  */
+
+//console.log( JSON.parse(localStorage.getItem( 'score')));
+//JSON.stringify(Score)
+
+function PlayGame(PlayMove)
+            {
+
+              const computerMove= (PickComputerMove());
+               let result=``;
+
+               /*
+               scisor*/
+            if(PlayMove===`Scissors`)
+             {
+        
+              if(computerMove===`rock`){
+
+         result=`you lose.`; }
+
+          else if(computerMove ===`Paper`){
+                 result=`you win.`;}
+             else if( computerMove===`Scissors`){
+          result=`tie.`;
+
+                 }}
+
+/*paper
+
+
+*/
+          
+              else if( PlayMove===`paper`){
+
+  
+                if(computerMove===`rock`){
+
+             result=`you win.`;
+}
+          else if(computerMove ===`Paper`){
+           result=`Tie.`;}
+         else if( computerMove===`Scissors`){
+         result=`you lose.`;}}
+
+/*
+rock*/
+          else if(PlayMove===`Rock`)
+         {
+
+          if(computerMove===`rock`){
+
+            result=`Tie.`;
+
+               }
+             else if(computerMove ===`Paper`){
+             result=`you lose.`;}
+                  else if( computerMove===`Scissors`){
+                 result=`you win.`;
+
+         }}
+if(result===`you win.`){
+Score.win +=1;
+}
+else if(result===`you lose.`){
+Score.losse +=1;
+}
+else if(result===`tie.`){
+Score.tie +=1;
+}
+
+    localStorage.setItem('score' , JSON.stringify(Score));
+
+
+
+    UpdateScoreElement();
+
+document.querySelector('.js-result').innerHTML=result;
+document.querySelector('.js-Move').innerHTML=
+`  you <img src="image/${PlayMove}.png"class="move-icon">
+<img src="image/${computerMove}.png" class="move-icon"> computer`;
+
+              
+
+} 
+
+
+function UpdateScoreElement(){
+document.querySelector('.js-Score').innerHTML=` win:   ${Score.win},  losse:  ${Score.lose},  Tie:  ${Score.tie}`;
+
+
+}
+
+function PickComputerMove()
+{
+  const  randomNumbere=Math.random();
+
+            let computerMove=``;
+                if(randomNumbere>=0 && randomNumbere <1/3)
+              {computerMove=`rock`;
+
+        }
+        else if(randomNumbere >=1/3 && randomNumbere <2/3)
+        {
+          computerMove=`Paper`;
+        }
+                      else if(randomNumbere>=2/3 &&randomNumbere<1)
+                      {computerMove=`Scissors`;};
+
+                      return computerMove;
+          }
